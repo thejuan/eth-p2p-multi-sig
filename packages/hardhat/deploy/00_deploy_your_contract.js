@@ -17,7 +17,7 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
   const { deployer } = await getNamedAccounts();
   const chainId = await getChainId();
 
-  await deploy("MetaMultiSigWallet", {
+  /* await deploy("MetaMultiSigWallet", {
     // Learn more about args here: https://www.npmjs.com/package/hardhat-deploy#deploymentsdeploy
     from: deployer,
     args: [
@@ -30,6 +30,11 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
     ],
     log: true,
     waitConfirmations: 5,
+  });*/
+
+  await deploy("MetaMultiSigWalletFactory", {
+    from: deployer,
+    args: [chainId],
   });
 
   // Getting a previously deployed contract

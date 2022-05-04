@@ -12,7 +12,7 @@ export default function Header({ link, title, subTitle }) {
 }
 
 Header.defaultProps = {
-  link: "https://github.com/austintgriffith/scaffold-eth",
+  link: "https://github.com/thejuan/eth-p2p-multi-sig",
   title: "P2P Multi-Sig",
   subTitle: "Napster for Wallets",
 };
