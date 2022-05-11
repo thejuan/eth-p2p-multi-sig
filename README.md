@@ -14,3 +14,4 @@ This is my attempt at the [Speed Run Challenge #5](https://speedrunethereum.com/
 - Test with ERC-20
 - Would be cool to have a custom call data builder
 - custom call data
+- remove executed trans

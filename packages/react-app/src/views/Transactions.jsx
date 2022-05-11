@@ -6,6 +6,7 @@ import { TransactionListItem } from "../components";
 import { useTransactions } from "../context";
 
 const filterInvalidTransactions = async ({ txs, contract }) => {
+  //TODO: remove executed trans
   const newTransactions = [];
   for (const trans of txs) {
     if (trans.deadline < new Date().getTime()) {

@@ -47,10 +47,9 @@ const { ethers } = require("ethers");
     You can also bring in contract artifacts in `constants.js`
     (and then use the `useExternalContractLoader()` hook!)
 */
-const poolServerUrl = "https://backend.multisig.holdings:49832/";
 
 /// 📡 What chain are your contracts deployed to?
-const initialNetwork = NETWORKS.localhost; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
+const initialNetwork = NETWORKS.rinkeby; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
 const contractName = "MetaMultiSigWallet";
 // 😬 Sorry for all the console logging
 const DEBUG = true;
@@ -327,7 +326,6 @@ function App(props) {
           </Route>
           <Route path="/create">
             <CreateTransaction
-              poolServerUrl={poolServerUrl}
               contractName={contractName}
               address={address}
               userProvider={userProvider}
@@ -342,7 +340,6 @@ function App(props) {
           </Route>
           <Route path="/pool">
             <Transactions
-              poolServerUrl={poolServerUrl}
               contractName={contractName}
               address={address}
               abiDecoder={abiDecoder}
